@@ -1,0 +1,12 @@
+{
+    "info": [
+        {
+            "label": "Bird",
+            "description": "This is a bird model."
+        },
+        {
+            "label": "Wooden House",
+            "description": "This is a wooden house model."
+        }
+    ]  
+}
