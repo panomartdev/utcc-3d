@@ -1,10 +1,8 @@
 /* eslint-disable no-unused-vars */
 import Field from '../models/Field';
-import Bird from '../models/Bird';
 import birdModel from "../assets/3d/bird.glb";
 import houseModel from "../assets/3d/bretonian_house.glb"
-
-import ModelConstructor from './ModelConstructor';
+import BuildingModel from './BuildingModel';
 
 
 const AllModels = () => {
@@ -38,7 +36,7 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
             rotation={fieldRotation}
           />
         {/* Bird */}
-        <ModelConstructor
+        <BuildingModel
           label="Bird" 
           modelScene={birdModel} 
           scale={[0.003, 0.003, 0.003]} 
@@ -49,7 +47,7 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
           />
 
         {/* Wooden House */}  
-        <ModelConstructor
+        <BuildingModel
           label="Wooden House"
           modelScene={houseModel}
           scale={[0.5, 0.5, 0.5]}
