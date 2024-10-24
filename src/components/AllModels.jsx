@@ -3,7 +3,7 @@ import Field from '../models/Field';
 import birdModel from "../assets/3d/bird.glb";
 import houseModel from "../assets/3d/bretonian_house.glb"
 import BuildingModel from './BuildingModel';
-import b7 from "../assets/3d/building7.glb"
+import b8 from "../assets/3d/building7.glb"
 
 
 const AllModels = () => {
