@@ -60,8 +60,8 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
       />
 
       <BuildingModel
-        label="b7"
-        modelScene={b7}
+        label="b8"
+        modelScene={b8}
         scale={0.15}
         rotation={[0, 0, 0]}
         position={[-3, 0.3, 0]}
