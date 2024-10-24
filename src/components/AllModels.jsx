@@ -3,6 +3,7 @@ import Field from '../models/Field';
 import birdModel from "../assets/3d/bird.glb";
 import houseModel from "../assets/3d/bretonian_house.glb"
 import BuildingModel from './BuildingModel';
+import b7 from "../assets/3d/building7.glb"
 
 
 const AllModels = () => {
@@ -58,6 +59,15 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
         orbitAngle={105}
       />
 
+      <BuildingModel
+        label="b7"
+        modelScene={b7}
+        scale={0.15}
+        rotation={[0, 0, 0]}
+        position={[-3, 0.3, 0]}
+        cameraPosition={[-1.5, 1.5, 0.5]}
+        orbitAngle={105}
+      />
     </>
   )
 }

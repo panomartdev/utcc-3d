@@ -7,6 +7,10 @@
         {
             "label": "Wooden House",
             "description": "This is a wooden house model."
+        },
+        {
+            "label": "b7",
+            "description": "This is building 7 model."
         }
     ]  
 }
