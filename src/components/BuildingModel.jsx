@@ -8,7 +8,7 @@ const BuildingModel = (props) => {
     const {scene} = useGLTF(modelScene)
     return (
       <>
-          <mesh scale={scale} position={position} rotation={rotation}>
+          <mesh scale={[scale, scale, scale]} position={position} rotation={rotation}>
               <primitive object={scene} />
           </mesh>
 

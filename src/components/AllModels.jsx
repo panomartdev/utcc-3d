@@ -30,32 +30,33 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
 
   return (
     <>
-        <Field 
-            scale={[0.1, 0.1, 0.1]}
-            position={[0, 0, 0]}
-            rotation={fieldRotation}
-          />
-        {/* Bird */}
-        <BuildingModel
-          label="Bird" 
-          modelScene={birdModel} 
-          scale={[0.003, 0.003, 0.003]} 
-          rotation={[0, 0, 0]}
-          position={[3, 1.5, -2]}
-          cameraPosition={[3, 3, 0]}
-          orbitAngle={295}
-          />
+      <Field 
+          scale={0.1}
+          position={[0, 0, 0]}
+          rotation={fieldRotation}
+      />
 
-        {/* Wooden House */}  
-        <BuildingModel
-          label="Wooden House"
-          modelScene={houseModel}
-          scale={[0.5, 0.5, 0.5]}
-          rotation={[0, 2.75, 0]}
-          position={[-1.5, 0.125, 2.5]}
-          cameraPosition={[-1.5, 1.5, 0.5]}
-          orbitAngle={105}
-          />
+      {/* Bird */}
+      <BuildingModel
+        label="Bird" 
+        modelScene={birdModel} 
+        scale={0.003} 
+        rotation={[0, 0, 0]}
+        position={[3, 1.5, -2]}
+        cameraPosition={[3, 3, 0]}
+        orbitAngle={295}
+      />
+
+      {/* Wooden House */}  
+      <BuildingModel
+        label="Wooden House"
+        modelScene={houseModel}
+        scale={0.5}
+        rotation={[0, 2.75, 0]}
+        position={[-1.5, 0.125, 2.5]}
+        cameraPosition={[-1.5, 1.5, 0.5]}
+        orbitAngle={105}
+      />
 
     </>
   )
