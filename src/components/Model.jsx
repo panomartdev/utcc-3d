@@ -3,7 +3,7 @@
 import { useGLTF } from "@react-three/drei"
 import Marker from "./Marker"
 
-const BuildingModel = (props) => {
+const Model = (props) => {
     const { modelScene, scale, position, rotation, label, cameraPosition, orbitAngle } = props //รับค่า Props ต่างๆ 
     const {scene} = useGLTF(modelScene)
     return (
@@ -26,4 +26,4 @@ const BuildingModel = (props) => {
     );
 }
 
-export default BuildingModel
+export default Model

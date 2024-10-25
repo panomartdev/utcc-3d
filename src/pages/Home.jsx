@@ -13,7 +13,7 @@ import DialogBox from "../components/DialogBox";
 
 
 export const Home = () => {
-  document.title = "UTCC 3D View"
+  document.title = "UTCC 3D Diagram"
   
   //============== Animation on start ======================
   const [introAnimateEnd, setIntroAnimateEnd] = useState(false);
@@ -55,6 +55,8 @@ const {selectedModel} = useContext(BuildingContext)
                   enableRotate={introAnimateEnd && selectedModel == null}
                   maxDistance={10} 
                   minDistance={2}
+                  autoRotate={introAnimateEnd && selectedModel == null}
+                  autoRotateSpeed={-0.5}
                   minPolarAngle={Math.PI / 4.5} 
                   maxPolarAngle={Math.PI / 1.75}
                   target={orbitPosition}

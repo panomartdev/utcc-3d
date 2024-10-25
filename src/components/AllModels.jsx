@@ -2,7 +2,7 @@
 import Field from '../models/Field';
 import birdModel from "../assets/3d/bird.glb";
 import houseModel from "../assets/3d/bretonian_house.glb"
-import BuildingModel from './BuildingModel';
+import Model from './Model';
 import b8 from "../assets/3d/building7.glb"
 
 
@@ -38,7 +38,7 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
       />
 
       {/* Bird */}
-      <BuildingModel
+      <Model
         label="Bird" 
         modelScene={birdModel} 
         scale={0.003} 
@@ -49,7 +49,7 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
       />
 
       {/* Wooden House */}  
-      <BuildingModel
+      <Model
         label="Wooden House"
         modelScene={houseModel}
         scale={0.5}
@@ -59,7 +59,7 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
         orbitAngle={105}
       />
 
-      <BuildingModel
+      <Model
         label="b8"
         modelScene={b8}
         scale={0.15}
