@@ -22,7 +22,7 @@ const DialogBox = () => {
      setSelectedModel(null);
      setModelInfo(null);
      setOrbitPosition([0, 0, 0]);
-     setCameraPosition([0, 1.5, 5]);
+     setCameraPosition([0, 10, 30]);
      setOrbitAngle(0);
   }
 
@@ -34,7 +34,9 @@ const DialogBox = () => {
               <>
                   <div className='flex justify-between items-center'>
                       <h2 className="text-4xl font-bold mb-2">{modelInfo.label}</h2>
-                      <button onClick={()=> handleClose()} className="bg-blue-500 rounded-full w-10 h-10 flex items-center justify-center">
+                      <button 
+                       onClick={()=> handleClose()} 
+                       className="bg-blue-500 rounded-full w-10 h-10 flex items-center justify-center">
                           <MdClose className="text-[28px] text-center text-white"/>
                       </button>
                   </div>

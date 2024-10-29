@@ -3,11 +3,11 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { useState, useRef, useEffect } from "react";
 import * as THREE from 'three'; 
 
-const IntroAnimation = ({startAnimation}) => {
+const IntroAnimation = ({startAnimation, endAnimatePosition}) => {
     const { camera } = useThree();
     const [animationComplete, setAnimationComplete] = useState(false);
     const startPosition = useRef([0, 3, 10]); // Starting position (far away)
-    const endPosition = [0, 1.5, 5]; // End position (as specified in your Canvas)
+    const endPosition = endAnimatePosition; // End position (as specified in your Canvas)
   
     useFrame(() => {
       if (!animationComplete) {

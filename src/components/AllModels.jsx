@@ -59,6 +59,7 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
         orbitAngle={105}
       />
 
+      {/* Building 8th */}
       <Model
         label="b8"
         modelScene={b8}
@@ -68,6 +69,9 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
         cameraPosition={[-1.5, 1.5, 0.5]}
         orbitAngle={105}
       />
+
+      
+
     </>
   )
 }

@@ -35,9 +35,10 @@ const CameraController = ({ orbitPosition,cameraPosition, orbitAngle = 0 }) => {
                 animationProgress.current = 1;
                 setIsAnimating(false);
             }
-
-            camera.position.lerpVectors(startPosition.current, targetPosition.current, animationProgress.current);
+            //Keyframe สำหรับเปลี่ยนตำแหน่งของกล้อง หรือ CameraPosition
+            camera.position.lerpVectors(startPosition.current, targetPosition.current, animationProgress.current); 
             
+            //Keyframe สำหรับการเปลี่ยนจุดที่กล้องโฟกัส หรือ OrbitPosition
             const currentLookAt = new THREE.Vector3();
             currentLookAt.lerpVectors(startLookAt.current, targetLookAt.current, animationProgress.current);
             camera.lookAt(currentLookAt);

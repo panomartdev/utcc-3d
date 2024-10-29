@@ -53,17 +53,17 @@ const {selectedModel} = useContext(BuildingContext)
                   enableZoom={introAnimateEnd && selectedModel == null} 
                   enablePan={false} 
                   enableRotate={introAnimateEnd && selectedModel == null}
-                  maxDistance={10} 
+                  maxDistance={500} 
                   minDistance={2}
                   autoRotate={introAnimateEnd && selectedModel == null}
                   autoRotateSpeed={-0.5}
-                  minPolarAngle={Math.PI / 4.5} 
-                  maxPolarAngle={Math.PI / 1.75}
+                  minPolarAngle={Math.PI / 4} //จำกัดมุมกล้องด้านบนสุด
+                  maxPolarAngle={Math.PI / 2.25} //จำกัดมุมกล้องด้านล่างสุด
                   target={orbitPosition}
                />
 
                {/* ควบคุมกล้องตอนโหลดหน้าใหม่ โดยเริ่มต้นจากระยะไกลๆ แล้วค่อยๆซูมเข้ามา */}
-               <IntroAnimation startAnimation={handleIntroAnimate}/>
+               <IntroAnimation startAnimation={handleIntroAnimate} endAnimatePosition={cameraPosition}/>
 
                {/* สำหรับการเปลี่ยนจุด Focus หรือ OrbitPosition */}
                <CameraController
