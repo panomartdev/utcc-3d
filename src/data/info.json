@@ -9,8 +9,16 @@
             "description": "This is a wooden house model."
         },
         {
+            "label": "b1",
+            "description": "This is building 1 model."
+        },
+        {
             "label": "b8",
             "description": "This is building 8 model."
+        },
+        {
+            "label": "b25",
+            "description": "This is building 25 model."
         }
     ]  
 }
