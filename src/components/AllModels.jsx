@@ -58,7 +58,6 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
         position={[-1.5, 0.125, 2.5]}
         cameraPosition={[-1.5, 1.5, 0.5]}
         orbitAngle={105}
-        marker={false}
       />
 
 
