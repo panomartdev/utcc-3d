@@ -4,6 +4,7 @@ import birdModel from "../assets/3d/bird.glb";
 import houseModel from "../assets/3d/bretonian_house.glb"
 import Model from './Model';
 import b8 from "../assets/3d/building7.glb"
+import b23 from "../assets/3d/building23.glb";
 
 
 const AllModels = () => {
@@ -57,19 +58,31 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
         position={[-1.5, 0.125, 2.5]}
         cameraPosition={[-1.5, 1.5, 0.5]}
         orbitAngle={105}
+        marker={false}
       />
 
 
       {/* Building 8th */}
       <Model
-        label="b8"
+        label=""
         modelScene={b8}
-        scale={0.15}
+        scale={0.0025}
         rotation={[0, 0, 0]}
-        position={[-3, 0.3, 0]}
-        cameraPosition={[-1.5, 1.5, 0.5]}
+        position={[-3, 1.5, 0]}
+        cameraPosition={[-1.5, 3, 0.5]}
         orbitAngle={105}
       />
+      
+      <Model
+        label="b8"
+        modelScene={b23}
+        scale={0.1}
+        rotation={[0, 0, 0]}
+        position={[3, 1.5, 0]}
+        cameraPosition={[1.5, 3, 0.5]}
+        orbitAngle={255}
+      />
+
       
     </>
   )
