@@ -11,6 +11,22 @@
         {
             "label": "b8",
             "description": "This is building 8 model."
+        },
+        {
+            "label": "ตึก 7",
+            "description": "This is 7th Building"
+        },
+        {
+            "label": "ตึก 9",
+            "description": "This is building 9"
+        },
+        {
+            "label": "ตึก 8",
+            "description": "This is 8th Building"
+        },
+        {
+            "label": "ตึก 23",
+            "description": "This is 23rd Building"
         }
     ]  
 }

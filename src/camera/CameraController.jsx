@@ -24,6 +24,7 @@ const CameraController = ({ orbitPosition,cameraPosition, orbitAngle = 0 }) => {
         
         targetPosition.current.set(newX, cameraPosition[1], newZ);
 
+
         targetLookAt.current.set(...orbitPosition);
         animationProgress.current = 0;
         setIsAnimating(true);

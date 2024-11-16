@@ -56,7 +56,7 @@ const {selectedModel} = useContext(BuildingContext)
                   maxDistance={500} 
                   minDistance={2}
                   autoRotate={introAnimateEnd && selectedModel == null}
-                  autoRotateSpeed={-0.5}
+                  autoRotateSpeed={-0.25}
                   minPolarAngle={Math.PI / 4} //จำกัดมุมกล้องด้านบนสุด
                   maxPolarAngle={Math.PI / 2.25} //จำกัดมุมกล้องด้านล่างสุด
                   target={orbitPosition}
