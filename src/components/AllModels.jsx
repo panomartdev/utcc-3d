@@ -4,6 +4,7 @@ import birdModel from "../assets/3d/bird.glb";
 import houseModel from "../assets/3d/bretonian_house.glb"
 import Model from './Model';
 
+import b1 from "../assets/3d/building1.glb";
 import b7 from "../assets/3d/building7.glb"
 import b8 from "../assets/3d/building8.glb";
 import b9 from "../assets/3d/building9.glb"
@@ -63,6 +64,13 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
         orbitAngle={105}
       />
 
+      <Model
+        label="ตึก 1"
+        modelScene={b1}
+        scale={0.1}
+        position={[-5, 0, -2]}
+        cameraPosition={[-5, 1.5, -1]}
+        orbitAngle={250}/>
 
       {/* Building 7th */}
       <Model
@@ -83,7 +91,7 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
         rotation={[0, 0, 0]}
         position={[-3, 0.5, -2]}
         cameraPosition={[-3, 2, -0.5]}
-        orbitAngle={255}
+        orbitAngle={240}
       />
       
       {/* Building 9th */}
@@ -105,7 +113,7 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
         rotation={[0, 0, 0]}
         position={[3, 1.5, 0]}
         cameraPosition={[1.5, 3, 0.5]}
-        orbitAngle={255}
+        orbitAngle={75}
       />
 
       

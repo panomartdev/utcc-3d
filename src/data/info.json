@@ -10,7 +10,15 @@
         },
         {
             "label": "b8",
-            "description": "This is building 8 model."
+            "description": "This is building 8 model.",
+            "images": [
+                "/img/img_b1/b1_1.jpg",
+                "/img/img_b1/b1_2.jpg"
+            ]
+        },
+        {
+            "label": "ตึก 1",
+            "description": "This is building 1st ตึกนี้อยู่ที่ด้านหน้าของมหาวิทยาลัย"
         },
         {
             "label": "ตึก 7",
@@ -22,7 +30,11 @@
         },
         {
             "label": "ตึก 8",
-            "description": "This is 8th Building"
+            "description": "This is 8th Building",
+            "images": [
+                "/img/img_b1/b1_1.jpg",
+                "/img/img_b1/b1_2.jpg"
+            ]
         },
         {
             "label": "ตึก 23",

@@ -7,8 +7,8 @@ import { OrbitControls } from "@react-three/drei";
 import IntroAnimation from "../camera/IntroAnimation";
 import CameraController from "../camera/CameraController";
 import { BuildingContext } from "../context/buildingContext";
-import AllModels from "../components/AllModels";
-import DialogBox from "../components/DialogBox";
+import AllModels from "@components/AllModels";
+import DialogBox from "@components/DialogBox";
 
 
 
