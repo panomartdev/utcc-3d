@@ -42,7 +42,7 @@ const DialogBox = () => {
                       </button>
                   </div>
 
-                  {/* <div className="mb-4">
+                  <div className="mb-4">
                       {modelInfo.images.map((image, index) => (
                         <img 
                           key={index} 
@@ -51,7 +51,7 @@ const DialogBox = () => {
                           className="w-full h-auto mb-2 rounded" 
                         />
                       ))}
-                  </div> */}
+                  </div>
 
                   <p className="mb-4">{modelInfo.description}</p>
               </>
