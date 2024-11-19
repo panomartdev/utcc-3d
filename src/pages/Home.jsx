@@ -23,7 +23,9 @@ export const Home = () => {
 
   //============== Camera positions and Orbit Controling Functions ===========
 
-const {orbitPosition, setOrbitPosition} = useContext(BuildingContext);
+//คำสั่งเรียกใช้ตัวแปรใน BuildingContext โดยต้องระบุตัวแปรจาก Context   
+
+const {orbitPosition, setOrbitPosition} = useContext(BuildingContext); 
 const {cameraPosition, setCameraPosition} = useContext(BuildingContext);
 const {orbitAngle, setOrbitAngle} = useContext(BuildingContext)
 const {selectedModel} = useContext(BuildingContext)     
