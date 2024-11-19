@@ -74,6 +74,7 @@ const {selectedModel} = useContext(BuildingContext)
 
                {/* All Models    */}
                <AllModels/>
+               {/* <Loader/> */}
                
                 
             

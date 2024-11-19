@@ -7,7 +7,8 @@ import Model from './Model';
 import b1 from "../assets/3d/building1.glb";
 import b7 from "../assets/3d/building7.glb"
 import b8 from "../assets/3d/building8.glb";
-import b9 from "../assets/3d/building9.glb"
+import b9 from "../assets/3d/building9.glb";
+import b22 from "../assets/3d/building22.glb"
 import b23 from "../assets/3d/building23.glb";
 
 
@@ -115,6 +116,8 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
         cameraPosition={[1.5, 3, 0.5]}
         orbitAngle={75}
       />
+
+      {/* Building 23rd */}
 
       
       
