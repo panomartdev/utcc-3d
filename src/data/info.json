@@ -17,6 +17,10 @@
             "description": "This is a wooden house model."
         },
         {
+            "label": "b1",
+            "description": "This is building 1 model."
+        },
+        {
             "label": "b8",
             "images": [
                 "/img/img_b1/b1_1.jpg",
