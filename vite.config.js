@@ -9,8 +9,9 @@ export default defineConfig({
   assetsInclude: ['**/*.glb'],
   resolve: {
     alias: {
-      '@store': '/src/components',
-      '@components': '/src/components',
+      "@store": "/src/components",
+      "@components": "/src/components",
+      "@image": "/src/assets",
     }
   }
 })

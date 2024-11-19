@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { BuildingContext } from '../context/buildingContext';
 import { MdClose } from "react-icons/md";
 
+
 const DialogBox = () => {
   const {selectedModel, setSelectedModel, setOrbitAngle, setCameraPosition, setOrbitPosition} = useContext(BuildingContext);  
   const [modelInfo, setModelInfo] = useState(null);
@@ -22,7 +23,7 @@ const DialogBox = () => {
      setSelectedModel(null);
      setModelInfo(null);
      setOrbitPosition([0, 0, 0]);
-     setCameraPosition([0, 10, 30]);
+     setCameraPosition([0, 1.5, 5]);
      setOrbitAngle(0);
   }
 
@@ -40,7 +41,19 @@ const DialogBox = () => {
                           <MdClose className="text-[28px] text-center text-white"/>
                       </button>
                   </div>
-            
+
+                  <div className="mb-4">
+                      {modelInfo.images.map((image, index) => (
+                        <img 
+                          key={index} 
+                          src={image} 
+                          alt={`${modelInfo.label} - ${index + 1}`} 
+                          className="w-full h-auto mb-2 rounded" 
+                        />
+                      ))}
+                  </div>
+                 
+
                   <p className="mb-4">{modelInfo.description}</p>
               </>
             )}

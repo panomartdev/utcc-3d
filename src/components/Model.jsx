@@ -4,7 +4,7 @@ import { useGLTF } from "@react-three/drei"
 import Marker from "./Marker"
 
 const Model = (props) => {
-    const { modelScene, scale, position, rotation, label, cameraPosition, orbitAngle } = props //รับค่า Props ต่างๆ 
+    const { modelScene, scale, position, rotation, label, cameraPosition, orbitAngle} = props //รับค่า Props ต่างๆ 
     const {scene} = useGLTF(modelScene)
     return (
       <>
@@ -15,13 +15,16 @@ const Model = (props) => {
           {/* สำหรับการส่ง Props จะเป็นแบบนี้ จะขึ้นต้นด้วย 
               <ชื่อตัวแปร> = {value ที่ต้องการส่ง} 
               เช่น position<ชื่อตัวแปร> = < ค่า value ดึงค่าจาก position ด้านบน > */}
-              
-          <Marker 
-            position={position} 
-            label={label} 
-            cameraPosition={cameraPosition}
-            orbitAngle={orbitAngle}
-          />
+          { 
+            label &&
+              <Marker 
+                position={position} 
+                label={label} 
+                cameraPosition={cameraPosition}
+                orbitAngle={orbitAngle}
+              />
+          }
+          
       </>
     );
 }

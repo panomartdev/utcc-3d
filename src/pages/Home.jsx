@@ -7,8 +7,8 @@ import { OrbitControls } from "@react-three/drei";
 import IntroAnimation from "../camera/IntroAnimation";
 import CameraController from "../camera/CameraController";
 import { BuildingContext } from "../context/buildingContext";
-import AllModels from "../components/AllModels";
-import DialogBox from "../components/DialogBox";
+import AllModels from "@components/AllModels";
+import DialogBox from "@components/DialogBox";
 
 
 
@@ -23,7 +23,9 @@ export const Home = () => {
 
   //============== Camera positions and Orbit Controling Functions ===========
 
-const {orbitPosition, setOrbitPosition} = useContext(BuildingContext);
+//คำสั่งเรียกใช้ตัวแปรใน BuildingContext โดยต้องระบุตัวแปรจาก Context   
+
+const {orbitPosition, setOrbitPosition} = useContext(BuildingContext); 
 const {cameraPosition, setCameraPosition} = useContext(BuildingContext);
 const {orbitAngle, setOrbitAngle} = useContext(BuildingContext)
 const {selectedModel} = useContext(BuildingContext)     
@@ -56,7 +58,7 @@ const {selectedModel} = useContext(BuildingContext)
                   maxDistance={500} 
                   minDistance={2}
                   autoRotate={introAnimateEnd && selectedModel == null}
-                  autoRotateSpeed={-0.5}
+                  autoRotateSpeed={-0.25}
                   minPolarAngle={Math.PI / 4} //จำกัดมุมกล้องด้านบนสุด
                   maxPolarAngle={Math.PI / 2.25} //จำกัดมุมกล้องด้านล่างสุด
                   target={orbitPosition}
@@ -74,6 +76,7 @@ const {selectedModel} = useContext(BuildingContext)
 
                {/* All Models    */}
                <AllModels/>
+               {/* <Loader/> */}
                
                 
             

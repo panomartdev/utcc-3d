@@ -3,7 +3,13 @@ import Field from '../models/Field';
 import birdModel from "../assets/3d/bird.glb";
 import houseModel from "../assets/3d/bretonian_house.glb"
 import Model from './Model';
-import b8 from "../assets/3d/building7.glb"
+
+import b1 from "../assets/3d/building1.glb";
+import b7 from "../assets/3d/building7.glb"
+import b8 from "../assets/3d/building8.glb";
+import b9 from "../assets/3d/building9.glb";
+import b22 from "../assets/3d/building22.glb"
+import b23 from "../assets/3d/building23.glb";
 
 
 const AllModels = () => {
@@ -59,19 +65,62 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
         orbitAngle={105}
       />
 
-      {/* Building 8th */}
       <Model
-        label="b8"
-        modelScene={b8}
-        scale={0.15}
+        label="ตึก 1"
+        modelScene={b1}
+        scale={0.1}
+        position={[-5, 0, -2]}
+        cameraPosition={[-5, 1.5, -1]}
+        orbitAngle={250}/>
+
+      {/* Building 7th */}
+      <Model
+        label="ตึก 7"
+        modelScene={b7}
+        scale={0.0025}
         rotation={[0, 0, 0]}
-        position={[-3, 0.3, 0]}
-        cameraPosition={[-1.5, 1.5, 0.5]}
-        orbitAngle={105}
+        position={[-3, 0, 0]}
+        cameraPosition={[-1.5, 1.5, 1.5]}
+        orbitAngle={45}
       />
 
+      {/* Building 8th */}
+      <Model
+        label="ตึก 8"
+        modelScene={b8}
+        scale={0.1}
+        rotation={[0, 0, 0]}
+        position={[-3, 0.5, -2]}
+        cameraPosition={[-3, 2, -0.5]}
+        orbitAngle={240}
+      />
       
+      {/* Building 9th */}
+      <Model
+        label="ตึก 9"
+        modelScene={b9}
+        scale={0.0025}
+        rotation={[0, 0, 0]}
+        position={[0, 0.2, -3]}
+        cameraPosition={[0, 2.5, -1.5]}
+        orbitAngle={160}
+      />
 
+      {/* Building 23rd */}
+      <Model
+        label="ตึก 23"
+        modelScene={b23}
+        scale={0.1}
+        rotation={[0, 0, 0]}
+        position={[3, 1.5, 0]}
+        cameraPosition={[1.5, 3, 0.5]}
+        orbitAngle={75}
+      />
+
+      {/* Building 23rd */}
+
+      
+      
     </>
   )
 }

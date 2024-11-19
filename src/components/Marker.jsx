@@ -20,7 +20,7 @@ const Marker = (props) => {
   };
 
   return (
-    <Html position={position} zIndexRange={[0, 0]} >
+    <Html position={[position[0], position[1]+ 0.25, position[2]]} zIndexRange={[0, 0]} >
         <div onClick={handleBuildingFocus} className='flex items-center justify-center cursor-pointer w-auto h-auto z-0'>
             {/* Hotspot Marker */}
             <div className="bg-transparent border border-white p-3 rounded-full shadow-lg flex items-center justify-center">

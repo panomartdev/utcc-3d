@@ -9,5 +9,5 @@ createRoot(document.getElementById('root')).render(
       <BuildingFocusProvider>
           <App />
       </BuildingFocusProvider>
-  </StrictMode>,
+  </StrictMode>
 )

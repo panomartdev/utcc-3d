@@ -2,10 +2,18 @@
     "info": [
         {
             "label": "Bird",
+            "images": [
+                "/img/img_b1/b1_1.jpg",
+                "/img/img_b1/b1_2.jpg"
+            ],
             "description": "This is a bird model."
         },
         {
             "label": "Wooden House",
+            "images": [
+                "/img/img_b1/b1_1.jpg",
+                "/img/img_b1/b1_2.jpg"
+            ],
             "description": "This is a wooden house model."
         },
         {
@@ -14,11 +22,51 @@
         },
         {
             "label": "b8",
+            "images": [
+                "/img/img_b1/b1_1.jpg",
+                "/img/img_b1/b1_2.jpg"
+            ],
             "description": "This is building 8 model."
         },
         {
-            "label": "b25",
-            "description": "This is building 25 model."
+            "label": "ตึก 1",
+            "images": [
+                "/img/img_b1/b1_1.jpg",
+                "/img/img_b1/b1_2.jpg"
+            ],
+            "description": "This is building 1st ตึกนี้อยู่ที่ด้านหน้าของมหาวิทยาลัย"
+        },
+        {
+            "label": "ตึก 7",
+            "images": [
+                "/img/img_b1/b1_1.jpg",
+                "/img/img_b1/b1_2.jpg"
+            ],
+            "description": "This is 7th Building"
+        },
+        {
+            "label": "ตึก 9",
+            "images": [
+                "/img/img_b1/b1_1.jpg",
+                "/img/img_b1/b1_2.jpg"
+            ],
+            "description": "This is building 9"
+        },
+        {
+            "label": "ตึก 8",
+            "images": [
+                "/img/img_b1/b1_1.jpg",
+                "/img/img_b1/b1_2.jpg"
+            ],
+            "description": "This is 8th Building"
+        },
+        {
+            "label": "ตึก 23",
+            "images": [
+                "/img/img_b1/b1_1.jpg",
+                "/img/img_b1/b1_2.jpg"
+            ],
+            "description": "This is 23rd Building"
         }
     ]  
 }

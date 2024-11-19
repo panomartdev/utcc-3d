@@ -21,7 +21,9 @@ const CameraController = ({ orbitPosition,cameraPosition, orbitAngle = 0 }) => {
         const angleRad = THREE.MathUtils.degToRad(orbitAngle);
         const newX = orbitPosition[0] + distance * Math.sin(angleRad);
         const newZ = orbitPosition[2] + distance * Math.cos(angleRad);
+        
         targetPosition.current.set(newX, cameraPosition[1], newZ);
+
 
         targetLookAt.current.set(...orbitPosition);
         animationProgress.current = 0;
