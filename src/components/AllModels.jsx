@@ -10,7 +10,7 @@ import b8 from "../assets/3d/building8.glb";
 import b9 from "../assets/3d/building9.glb";
 import b22 from "../assets/3d/building22.glb"
 import b23 from "../assets/3d/building23.glb";
-import mainscene from "../assets/3d/Mainscene.glb"
+import mainscene from "../assets/3d/Mainscenev2.glb"
 
 const AllModels = () => {
 
