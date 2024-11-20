@@ -8,13 +8,15 @@ const BuildingFocusProvider = ({children}) => {
     const [cameraPosition, setCameraPosition] = useState([0, 1.5, 5]);
     const [orbitAngle, setOrbitAngle] = useState(0);
     const [selectedModel, setSelectedModel] = useState(null);
+    const [lightTheme, setLightTheme] = useState(true);
 
 
     const contextValue = {
       orbitPosition, setOrbitPosition, 
       cameraPosition, setCameraPosition, 
       orbitAngle, setOrbitAngle,
-      selectedModel, setSelectedModel
+      selectedModel, setSelectedModel,
+      lightTheme, setLightTheme
    }
     
   return <BuildingContext.Provider value={contextValue}>{children}</BuildingContext.Provider>

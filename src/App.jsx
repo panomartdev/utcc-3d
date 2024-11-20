@@ -4,6 +4,8 @@ import { Home } from './pages/Home'
 
 import About from './pages/About'
 import ErrorPage from './pages/Error'
+import { useContext } from 'react'
+import { BuildingContext } from './context/buildingContext'
 
 function App() {
    //สร้าง Routing สำหรับหน้าเว็ปต่างๆ
@@ -19,8 +21,10 @@ function App() {
     }
   ])
 
+  const {lightTheme, setLightTheme} = useContext(BuildingContext)
+
   return (
-    <div className='bg-slate-300/20'>
+    <div className={`bg-slate-300/20 ${lightTheme ? "text-blue-600":"text-green-500"}`}>
         <RouterProvider router={router}/>
     </div>
   )
