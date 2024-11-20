@@ -10,7 +10,7 @@ import b8 from "../assets/3d/building8.glb";
 import b9 from "../assets/3d/building9.glb";
 import b22 from "../assets/3d/building22.glb"
 import b23 from "../assets/3d/building23.glb";
-
+import mainscene from "../assets/3d/Mainscene.glb"
 
 const AllModels = () => {
 
@@ -119,7 +119,16 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
 
       {/* Building 23rd */}
 
-      
+      {/* Mainscene */}
+      <Model
+        label="ตึก 23"
+        modelScene={mainscene}
+        scale={1}
+        rotation={[0, 0, 0]}
+        position={[0, 5, 0]}
+        cameraPosition={[0, 6.5, 1]}
+        orbitAngle={0}
+      />
       
     </>
   )
