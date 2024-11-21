@@ -5,7 +5,7 @@ export const BuildingContext = createContext();
 
 const BuildingFocusProvider = ({children}) => {
     const [orbitPosition , setOrbitPosition] = useState([0, 0, 0]);
-    const [cameraPosition, setCameraPosition] = useState([0, 1.5, 5]);
+    const [cameraPosition, setCameraPosition] = useState([0, 15, 35]);
     const [orbitAngle, setOrbitAngle] = useState(0);
     const [selectedModel, setSelectedModel] = useState(null);
     const [lightTheme, setLightTheme] = useState(true);

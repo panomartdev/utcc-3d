@@ -4,6 +4,7 @@ import birdModel from "../assets/3d/bird.glb";
 import houseModel from "../assets/3d/bretonian_house.glb"
 import Model from './Model';
 
+import mainGround from "../assets/3d/scaledgroundroad.glb"
 import b1 from "../assets/3d/building1.glb";
 import b7 from "../assets/3d/building7.glb"
 import b8 from "../assets/3d/building8.glb";
@@ -37,10 +38,9 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
 
   return (
     <>
-      <Field 
-          scale={0.1}
+      <Model
+          modelScene={mainGround}
           position={[0, 0, 0]}
-          rotation={fieldRotation}
       />
 
       {/* Bird */}
@@ -120,15 +120,7 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
       {/* Building 23rd */}
 
       {/* Mainscene */}
-      <Model
-        label="ตึก 23"
-        modelScene={mainscene}
-        scale={1}
-        rotation={[0, 0, 0]}
-        position={[0, 5, 0]}
-        cameraPosition={[0, 6.5, 1]}
-        orbitAngle={0}
-      />
+     
       
     </>
   )
