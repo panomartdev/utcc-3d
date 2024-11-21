@@ -26,7 +26,7 @@ const DialogBox = () => {
      setSelectedModel(null);
      setModelInfo(null);
      setOrbitPosition([0, 0, 0]);
-     setCameraPosition([0, 15, 35]);
+     setCameraPosition([0, 15, 25]);
      setOrbitAngle(0);
   }
 
@@ -55,11 +55,18 @@ const DialogBox = () => {
                       </button>
                   </div>
 
-                  <Slider {...settings}>
-                      {modelInfo.images.map((image,index) => (
-                           <img key={index} src={image} alt='' className='w-full'/>
-                      ))}
-                  </Slider>
+                 {
+                    modelInfo.images.length < 2 ? (
+                        <img src={modelInfo.images} alt='' className='w-full'/>
+                    ):(
+                        <Slider {...settings}>
+                            {modelInfo.images.map((image,index) => (
+                                <img key={index} src={image} alt='' className='w-full'/>
+                            ))}
+                       </Slider>
+                    )     
+                 }
+                  
                  
 
                   <p className="mb-4">{modelInfo.description}</p>
