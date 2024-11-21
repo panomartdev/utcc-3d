@@ -23,7 +23,7 @@ const DialogBox = () => {
      setSelectedModel(null);
      setModelInfo(null);
      setOrbitPosition([0, 0, 0]);
-     setCameraPosition([0, 1.5, 5]);
+     setCameraPosition([0, 15, 35]);
      setOrbitAngle(0);
   }
 

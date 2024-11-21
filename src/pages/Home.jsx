@@ -55,8 +55,8 @@ const {selectedModel} = useContext(BuildingContext)
                   enableZoom={introAnimateEnd && selectedModel == null} 
                   enablePan={false} 
                   enableRotate={introAnimateEnd && selectedModel == null}
-                  maxDistance={60} 
-                  minDistance={2}
+                  maxDistance={40} 
+                  minDistance={selectedModel == null ? 15 : 2}
                   autoRotate={introAnimateEnd && selectedModel == null}
                   autoRotateSpeed={-0.25}
                   minPolarAngle={Math.PI / 5} //จำกัดมุมกล้องด้านบนสุด

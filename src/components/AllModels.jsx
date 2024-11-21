@@ -40,7 +40,7 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
     <>
       <Model
           modelScene={mainGround}
-          position={[0, 0, 0]}
+          position={[0, -1, 0]}
       />
 
       {/* Bird */}
@@ -120,7 +120,15 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
       {/* Building 23rd */}
 
       {/* Mainscene */}
-     
+      <Model
+        label=""
+        modelScene={mainscene}
+        scale={1}
+        rotation={[0, 0, 0]}
+        position={[0.25, -1, -0.6]}
+        cameraPosition={[1.5, 3, 0.5]}
+        orbitAngle={75}
+      />
       
     </>
   )
