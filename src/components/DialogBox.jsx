@@ -55,16 +55,6 @@ const DialogBox = () => {
                       </button>
                   </div>
 
-                  {/* <div className="mb-4">
-                      {modelInfo.images.map((image, index) => (
-                        <img 
-                          key={index} 
-                          src={image} 
-                          alt={`${modelInfo.label} - ${index + 1}`} 
-                          className="w-full h-auto mb-2 rounded" 
-                        />
-                      ))}
-                  </div> */}
                   <Slider {...settings}>
                       {modelInfo.images.map((image,index) => (
                            <img key={index} src={image} alt='' className='w-full'/>
@@ -72,7 +62,7 @@ const DialogBox = () => {
                   </Slider>
                  
 
-                  {/* <p className="mb-4">{modelInfo.description}</p> */}
+                  <p className="mb-4">{modelInfo.description}</p>
               </>
             )}
            
