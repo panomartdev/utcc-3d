@@ -1,72 +1,32 @@
 {
     "info": [
         {
-            "label": "Bird",
-            "images": [
-                "/img/img_b1/b1_1.jpg",
-                "/img/img_b1/b1_2.jpg"
-            ],
-            "description": "เบิร์ด ธงชัย แมคอินตาย"
-        },
-        {
-            "label": "Wooden House",
-            "images": [
-                "/img/img_b1/b1_1.jpg",
-                "/img/img_b1/b1_2.jpg"
-            ],
-            "description": "This is a wooden house model."
-        },
-        {
-            "label": "b1",
-            "description": "This is building 1 model."
-        },
-        {
-            "label": "b8",
-            "images": [
-                "/img/img_b1/b1_1.jpg",
-                "/img/img_b1/b1_2.jpg"
-            ],
-            "description": "This is building 8 model."
-        },
-        {
             "label": "ตึก 1",
             "images": [
                 "/img/img_b1/b1_1.jpg",
-                "/img/img_b1/b1_2.jpg"
+                "/public/img/img_b1/b1_2.jpg",
+                "/public/img/img_b1/b1_3.jpg"
             ],
-            "description": "This is building 1st ตึกนี้อยู่ที่ด้านหน้าของมหาวิทยาลัย"
+            "description": "ภายในตึกจะมีห้อง IDE Learning Space ไว้สำหรับเป็นพื้นที่พักผ่อนในเวลาที่ว่างจากการเรียนในห้องเรียน และเป็นที่หาความรู้ในเรื่องต่างๆ ผ่านระบบเน็ตเวิร์คของมหาวิทยาลัย "
         },
         {
-            "label": "ตึก 7",
+            "label": "ตึก 3",
             "images": [
-                "/img/img_b1/b1_1.jpg",
-                "/img/img_b1/b1_2.jpg"
+                "/img/img_b3/b3_1.jpg",
+                "/public/img/img_b3/b3_2.jpeg",
+                "/public/img/img_b3/b3_3.jpg"
             ],
-            "description": "This is 7th Building"
+            "description": "เป็นโซน UTCC Space สำหรับชาร์จพลังรอเรียน มีที่สำหรับนั่งชิว รอเพื่อน นัดประชุมทำงานกลุ่ม และยังมีพื้นที่สำหรับคนที่อยากเต้น Cover Dance และมีโซนดูหนัง ยังไม่หมดเพียงแค่นั้น ที่นี่มีสไลด์เดอร์ให้เล่นด้วย  ถ้าคุณลองเล่นรอบนึงแล้วคุณจะลืมวิธีการลงบันไดจากชั้นสองของตึกแน่นอน "
         },
         {
-            "label": "ตึก 9",
+            "label": "ตึก 5",
             "images": [
-                "/img/img_b1/b1_1.jpg",
-                "/img/img_b1/b1_2.jpg"
+                "/img/img_b5/b5_1.jpg",
+                "/public/img/img_b5/b3_2.jpeg",
+                "/public/img/img_b3/b3_3.jpg"
             ],
-            "description": "This is building 9"
-        },
-        {
-            "label": "ตึก 8",
-            "images": [
-                "/img/img_b1/b1_1.jpg",
-                "/img/img_b1/b1_2.jpg"
-            ],
-            "description": "This is 8th Building"
-        },
-        {
-            "label": "ตึก 23",
-            "images": [
-                "/img/img_b1/b1_1.jpg",
-                "/img/img_b1/b1_2.jpg"
-            ],
-            "description": "This is 23rd Building"
+            "description": "เป็นโซน UTCC Space สำหรับชาร์จพลังรอเรียน มีที่สำหรับนั่งชิว รอเพื่อน นัดประชุมทำงานกลุ่ม และยังมีพื้นที่สำหรับคนที่อยากเต้น Cover Dance และมีโซนดูหนัง ยังไม่หมดเพียงแค่นั้น ที่นี่มีสไลด์เดอร์ให้เล่นด้วย  ถ้าคุณลองเล่นรอบนึงแล้วคุณจะลืมวิธีการลงบันไดจากชั้นสองของตึกแน่นอน "
         }
+        
     ]  
 }
