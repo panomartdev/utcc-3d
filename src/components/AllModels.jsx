@@ -141,7 +141,7 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
         label="ตึก 16"
         modelScene={b16}
         scale={1}
-        position={[0, 0.5, -18]}
+        position={[0, 0.5, -17.5]}
         cameraPosition={[0, 5, -12.5]}
         orbitAngle={50}/>
 
@@ -168,8 +168,8 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
         label="ตึก 20"
         modelScene={b20}
         scale={1}
-        position={[-2.5, 0.5, 18.5]}
-        cameraPosition={[-2.5, 7, 18]}
+        position={[-2.5, 0.5, 17]}
+        cameraPosition={[-2.5, 6, 16]}
         orbitAngle={160}/>
 
       {/* Building 21st */}
