@@ -32,7 +32,7 @@ const CameraController = ({ orbitPosition,cameraPosition, orbitAngle = 0 }) => {
 
     useFrame(() => {
         if (isAnimating) {
-            animationProgress.current += 0.007;
+            animationProgress.current += 0.006;
             if (animationProgress.current > 1) {
                 animationProgress.current = 1;
                 setIsAnimating(false);

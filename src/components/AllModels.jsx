@@ -44,17 +44,17 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
       />
 
       <Model
-        label="ตึก 1"
+        label="ตึก 20"
         modelScene={b1}
         scale={1}
         position={[-5, 0, -2]}
-        cameraPosition={[-5, 1.5, -1]}
-        orbitAngle={250}/>
+        cameraPosition={[-5, 5, 7]}
+        orbitAngle={90}/>
 
   
 
       {/* Mainscene */}
-      <Model
+      {/* <Model
         label=""
         modelScene={mainscene}
         scale={1}
@@ -62,7 +62,7 @@ const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForSc
         position={[0.25, -1, -0.6]}
         cameraPosition={[1.5, 3, 0.5]}
         orbitAngle={75}
-      />
+      /> */}
       
     </>
   )

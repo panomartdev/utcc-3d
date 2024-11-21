@@ -1,6 +1,9 @@
 import { useContext, useEffect, useState } from 'react';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { BuildingContext } from '../context/buildingContext';
 import { MdClose } from "react-icons/md";
+import Slider from 'react-slick';
 
 
 const DialogBox = () => {
@@ -27,6 +30,16 @@ const DialogBox = () => {
      setOrbitAngle(0);
   }
 
+  var settings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
  
       <div className={`${modelInfo ? "right-0" : "right-[-200%]"} w-[30rem] min-h-full fixed bg-white py-5 px-6 shadow-lg z-10 rounded transition-all duration-1000 ease-in-out`}>
@@ -42,7 +55,7 @@ const DialogBox = () => {
                       </button>
                   </div>
 
-                  <div className="mb-4">
+                  {/* <div className="mb-4">
                       {modelInfo.images.map((image, index) => (
                         <img 
                           key={index} 
@@ -51,10 +64,15 @@ const DialogBox = () => {
                           className="w-full h-auto mb-2 rounded" 
                         />
                       ))}
-                  </div>
+                  </div> */}
+                  <Slider {...settings}>
+                      {modelInfo.images.map((image,index) => (
+                           <img key={index} src={image} alt='' className='w-full'/>
+                      ))}
+                  </Slider>
                  
 
-                  <p className="mb-4">{modelInfo.description}</p>
+                  {/* <p className="mb-4">{modelInfo.description}</p> */}
               </>
             )}
            
