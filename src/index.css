@@ -6,3 +6,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.main-transition{
+  @apply transition-all duration-1000 ease-in-out
+}

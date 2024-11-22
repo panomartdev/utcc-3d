@@ -33,9 +33,9 @@
       }
   }
 
- .slider-imgs{
+.slider-imgs{
     @apply w-full h-[35vh] object-cover border-8 border-solid border-slate-500 rounded-3xl;
- } 
+} 
 
 .custom-scrollbar::-webkit-scrollbar {
     width: 8px; 
