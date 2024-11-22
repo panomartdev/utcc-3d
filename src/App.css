@@ -3,3 +3,36 @@
 *{
     font-family:"Mali", cursive ;
 }
+
+.slick-dots {
+    position: absolute;
+ 
+    list-style: none;
+    display: block;
+    li{
+        margin: 0 1px !important;
+    }
+    
+    li.slick-active button:before {
+        opacity: 0.75 !important;
+        color: black !important;
+        font-size: 13px !important;
+        border-radius: 50%;
+        width: 10px !important;
+        height: 10px !important;
+        margin-top: 0;
+      }
+      
+      li button:before {
+        font-family: 'slick';
+        font-size: 13px !important;
+        opacity: 0.3 !important;
+        color: black !important;
+        width: 10px !important;
+        height: 10px !important;
+      }
+  }
+
+ .slider-imgs{
+    @apply w-full h-[40vh] object-cover border-8 border-solid border-slate-500 rounded-3xl;
+ } 

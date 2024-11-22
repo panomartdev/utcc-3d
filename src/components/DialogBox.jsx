@@ -56,19 +56,21 @@ const DialogBox = () => {
                       </button>
                   </div>
 
-                  <div className='mt-2 mb-10 h-[40vh] object-cover border-8 border-solid border-slate-500 rounded-3xl overflow-hidden'>
+                  <div className='mt-2 mb-10'>
                     {
                       modelInfo.images.length < 2 ? (
-                          <img src={modelInfo.images} alt='' className='w-full object-cover rounded-[16px] bg-center'/>
+                          <img src={modelInfo.images} alt='' className='slider-imgs'/>
                       ):(
                           <Slider {...settings}>
                               {modelInfo.images.map((image,index) => (
-                                  <img key={index} src={image} alt='' className='w-full object-cover rounded-[16px]'/>
+                                  <img key={index} src={image} alt='' className='slider-imgs'/>
                               ))}
                         </Slider>
                       )     
                     }
                   </div>     
+                  
+                  
 
                   <p className="">{modelInfo.description}</p>
               </>

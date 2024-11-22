@@ -58,8 +58,8 @@ const AllModels = () => {
         modelScene={b5}
         scale={1}
         position={[0, 0.5, -13]}
-        cameraPosition={[0, 7, -9]}
-        orbitAngle={165}/>
+        cameraPosition={[0, 5, -6]}
+        orbitAngle={50}/>
 
       {/* Building 7th */}
       <Model
