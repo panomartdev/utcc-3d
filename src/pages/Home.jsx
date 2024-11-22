@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import Loader from "../components/Loader";
+import Footer from "../components/Footer";
 import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import { Suspense, useState, useCallback, useContext, useEffect } from "react";
 import Sky from "../models/Sky";
@@ -37,7 +38,7 @@ const {selectedModel} = useContext(BuildingContext)
     <section className="w-full h-screen relative">
       <DialogBox/>
       
-       <Canvas className="w-full h-screen bg-transparent">
+       <Canvas className="w-full h-[80vh] bg-transparent">
           <Suspense fallback={<Loader/>}>
                
                <directionalLight/>
@@ -82,6 +83,7 @@ const {selectedModel} = useContext(BuildingContext)
             
           </Suspense>
        </Canvas>
+       <Footer/> 
     </section>
   )
 }
