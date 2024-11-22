@@ -28,27 +28,6 @@ import mainscene from "../assets/3d/Mainscenev2.glb"
 
 const AllModels = () => {
 
-  //================ All Models Scaling, Positioning and Responsive Adjustment ========================
-
-  const adjustFieldForScreen = () =>{
-    let fieldScale = null; 
-    let fieldPosition = [0, -6.5, -43];
-    let fieldCamera = [0, 1.5, 4];
-    let rotation = [0.1, 4.7, 0];
-
-    if(window.innerWidth < 768) {
-       fieldScale = [0.9, 0.9, 0.9];
-       fieldPosition = [0, -6.5, -43];
-    } else {
-       fieldScale = [0.1, 0.1, 0.1];
-       fieldPosition = [0, 0, 0];
-    }
-
-    return [fieldScale, fieldPosition, rotation, fieldCamera];
-}
-const [fieldScale, fieldPosition, fieldRotation, fieldCamera] = adjustFieldForScreen();
-
-
   return (
     <>
       <Model

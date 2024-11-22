@@ -38,6 +38,7 @@ const DialogBox = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    fade: true
   };
 
   return (
@@ -55,21 +56,21 @@ const DialogBox = () => {
                       </button>
                   </div>
 
-                 {
-                    modelInfo.images.length < 2 ? (
-                        <img src={modelInfo.images} alt='' className='w-full'/>
-                    ):(
-                        <Slider {...settings}>
-                            {modelInfo.images.map((image,index) => (
-                                <img key={index} src={image} alt='' className='w-full'/>
-                            ))}
-                       </Slider>
-                    )     
-                 }
-                  
-                 
+                  <div className='mt-2 mb-10 h-[40vh] object-cover border-8 border-solid border-slate-500 rounded-3xl overflow-hidden'>
+                    {
+                      modelInfo.images.length < 2 ? (
+                          <img src={modelInfo.images} alt='' className='w-full object-cover rounded-[16px] bg-center'/>
+                      ):(
+                          <Slider {...settings}>
+                              {modelInfo.images.map((image,index) => (
+                                  <img key={index} src={image} alt='' className='w-full object-cover rounded-[16px]'/>
+                              ))}
+                        </Slider>
+                      )     
+                    }
+                  </div>     
 
-                  <p className="mb-4">{modelInfo.description}</p>
+                  <p className="">{modelInfo.description}</p>
               </>
             )}
            
