@@ -43,7 +43,7 @@ const DialogBox = () => {
 
   return (
  
-      <div className={`${modelInfo ? "right-0" : "right-[-200%]"} w-[30rem] min-h-full fixed bg-white py-5 px-6 shadow-lg z-10 rounded transition-all duration-1000 ease-in-out`}>
+      <div className={`${modelInfo ? "right-0" : "right-[-200%]"} w-[30rem] min-h-[82.5vh] top-1/2 transform -translate-y-1/2 fixed bg-white py-5 px-6 shadow-lg flex flex-col z-10 rounded transition-all duration-1000 ease-in-out`}>
         
             {modelInfo && (
               <>
@@ -71,8 +71,10 @@ const DialogBox = () => {
                   </div>     
                   
                   
-
-                  <p className="">{modelInfo.description}</p>
+                  <div className='bg-orange-500 flex-grow overflow-y-auto'>
+                     <p className="">{modelInfo.description}</p>
+                  </div>
+                 
               </>
             )}
            

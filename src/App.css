@@ -16,7 +16,7 @@
     li.slick-active button:before {
         opacity: 0.75 !important;
         color: black !important;
-        font-size: 13px !important;
+        font-size: 11px !important;
         border-radius: 50%;
         width: 10px !important;
         height: 10px !important;
@@ -25,7 +25,7 @@
       
       li button:before {
         font-family: 'slick';
-        font-size: 13px !important;
+        font-size: 11px !important;
         opacity: 0.3 !important;
         color: black !important;
         width: 10px !important;
@@ -34,5 +34,5 @@
   }
 
  .slider-imgs{
-    @apply w-full h-[40vh] object-cover border-8 border-solid border-slate-500 rounded-3xl;
+    @apply w-full h-[35vh] object-cover border-8 border-solid border-slate-500 rounded-3xl;
  } 
