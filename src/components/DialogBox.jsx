@@ -71,7 +71,7 @@ const DialogBox = () => {
                   </div>     
                   
                   
-                  <div className='bg-[#bee7e8] h-[30vh] overflow-y-scroll px-6 py-4 rounded-lg'>
+                  <div className='bg-[#bee7e8] h-[30vh] overflow-y-scroll px-6 py-4 rounded-lg custom-scrollbar'>
                      <p className="">{modelInfo.description}</p>
                   </div>
                  
