@@ -3,7 +3,7 @@
 import Loader from "../components/Loader";
 import Footer from "../components/Footer";
 import { Canvas, useThree, useFrame } from "@react-three/fiber";
-import { Suspense, useState, useCallback, useContext, useEffect, useRef, useRef } from "react";
+import { Suspense, useState, useCallback, useContext, useEffect, useRef} from "react";
 import Sky from "../models/Sky";
 import { OrbitControls } from "@react-three/drei";
 import IntroAnimation from "../camera/IntroAnimation";
@@ -34,22 +34,9 @@ const {selectedModel} = useContext(BuildingContext);
     <section className="w-full h-screen relative">
       <DialogBox/>
       
-<<<<<<< HEAD
-       <Canvas className="w-full h-[80vh] bg-transparent">
-          <Suspense fallback={<Loader/>}>
-               
-               <directionalLight position={[0, 10, 0]}/>
-                <ambientLight position={[0, 5, 0]}/>
-                <pointLight position={[0, 10, 0]}/>
-                <spotLight position={[0, 10, 0]}/>
-                <hemisphereLight position={[0, 5, 0]}/>
-               
-               <Sky/>
-=======
       <Canvas className="w-full h-screen bg-transparent">
         <Suspense fallback={<Loader/>}>
           <Loader load={true}/>
->>>>>>> 8de25de (implement fade intro)
 
           <directionalLight/>
           <ambientLight/>
@@ -74,7 +61,6 @@ const {selectedModel} = useContext(BuildingContext);
              target={orbitPosition}
           />
 
-<<<<<<< HEAD
                {/* Component สำหรับการควบคุมมุมกล้อง (หมุนซ้าย-ขวา , หมุนขึ้น-ลง) */}
                <OrbitControls
                   enableZoom={introAnimateEnd && selectedModel == null} 
@@ -88,10 +74,8 @@ const {selectedModel} = useContext(BuildingContext);
                   maxPolarAngle={Math.PI / 2.25} //จำกัดมุมกล้องด้านล่างสุด
                   target={orbitPosition}
                />
-=======
           {/* ควบคุมกล้องตอนโหลดหน้าใหม่ โดยเริ่มต้นจากระยะไกลๆ แล้วค่อยๆซูมเข้ามา */}
           <IntroAnimation startAnimation={handleIntroAnimate} endAnimatePosition={cameraPosition}/>
->>>>>>> 8de25de (implement fade intro)
 
           {/* สำหรับการเปลี่ยนจุด Focus หรือ OrbitPosition */}
           <CameraController
@@ -100,7 +84,6 @@ const {selectedModel} = useContext(BuildingContext);
              orbitAngle={orbitAngle}
           /> 
 
-<<<<<<< HEAD
                {/* สำหรับการเปลี่ยนจุด Focus หรือ OrbitPosition */}
                <CameraController
                   orbitPosition={orbitPosition} 
@@ -117,12 +100,6 @@ const {selectedModel} = useContext(BuildingContext);
           </Suspense>
        </Canvas>
        <Footer/> 
-=======
-          {/* All Models    */}
-          <AllModels/>
-        </Suspense>
-      </Canvas>
->>>>>>> 8de25de (implement fade intro)
     </section>
   )
 }
