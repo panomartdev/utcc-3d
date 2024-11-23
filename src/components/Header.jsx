@@ -2,9 +2,9 @@
 
 const Header = () => {
   return (
-    <div className="absolute top-0 z-10">
+    <header className="absolute top-0 z-10">
         Header
-    </div>
+    </header>
   )
 }
 
