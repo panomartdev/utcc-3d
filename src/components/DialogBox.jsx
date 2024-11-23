@@ -7,7 +7,7 @@ import Slider from 'react-slick';
 
 
 const DialogBox = () => {
-  const {selectedModel, setSelectedModel, setOrbitAngle, setCameraPosition, setOrbitPosition} = useContext(BuildingContext);  
+  const {selectedModel, setSelectedModel, setOrbitAngle, setCameraPosition, setOrbitPosition , lightTheme} = useContext(BuildingContext);  
   const [modelInfo, setModelInfo] = useState(null);
 
   // Fetch data from JSON file
@@ -34,6 +34,7 @@ const DialogBox = () => {
     dots: true,
     infinite: true,
     autoplay: true,
+    arrows: false,
     autoplaySpeed: 2000,
     speed: 500,
     slidesToShow: 1,
@@ -43,7 +44,7 @@ const DialogBox = () => {
 
   return (
  
-      <div className={`${modelInfo ? "right-0" : "right-[-200%]"} w-[25rem] min-h-[82.5vh] top-1/2 transform -translate-y-1/2 fixed bg-white py-5 px-6 shadow-lg flex flex-col z-10 rounded transition-all duration-1000 ease-in-out rounded-l-3xl `}>
+      <div className={`${modelInfo ? "right-0" : "right-[-200%]"} ${lightTheme ? 'bg-[#ffffffd7]':'bg-[#2e2e2e]'} w-[25rem] min-h-[82.5vh] top-1/2 transform -translate-y-1/2 fixed py-5 px-6 shadow-lg flex flex-col z-10 rounded transition-all duration-1000 ease-in-out rounded-l-3xl `}>
         
             {modelInfo && (
               <>

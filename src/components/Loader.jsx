@@ -2,7 +2,6 @@ import { Html, useProgress } from "@react-three/drei"
 import introImg from "../assets/intro.svg"
 
 const Loader = ({load}) => {
-  const {progress} = useProgress();
   if (load) {
     setTimeout(() => {
       document.getElementById("suspenseComponent").classList.add("fade");

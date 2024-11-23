@@ -8,6 +8,7 @@ import mainGround from "@image/3d/maingroundroad_update.glb"
 import courtyard from "@image/3dmodels/Courtyard.glb";
 import playground from "@image/3dmodels/Playground.glb";
 import Maesai from "@image/3dmodels/TreesB10.glb";
+import Flag from "@image/3dmodels/Flag.glb";
 import b1 from "@image/3dmodels/Building1st.glb";
 import b3 from "@image/3dmodels/Building3rd.glb";
 import b5 from "@image/3dmodels/Building5th.glb";
@@ -37,7 +38,9 @@ const AllModels = () => {
     {position:[1.2, 0.5, 6.5], rotation:[0, 1.8, 0]},
     {position:[-0.8, 0.5, 5.5], rotation:[0, 2.70, 0]},
     {position:[0, 0.5, 6.5], rotation:[0, 1.8, 0]},
-    {position:[1.5, 0.5, 5.5], rotation:[0, 2.8, 0]}
+    {position:[1.5, 0.5, 5.5], rotation:[0, 2.8, 0]},
+    {position:[-9.5, 0.5, 8], rotation:[0, 0, 0]},
+    {position:[-9, 0.5, 9], rotation:[0, 3, 0]},
   ];
 
   return (
@@ -223,11 +226,17 @@ const AllModels = () => {
         position={[9, 0.5, 9]}
         />
 
-      {/* Special Tree   */}
+      {/* Maesai Tree   */}
       <Model
         modelScene={Maesai}
         position={[7, 0.5, 13]}
         rotation={[0, 1.2, 0]}/>
+
+      {/* Flag   */}
+      <Model
+        modelScene={Flag}
+        scale={0.4}
+        position={[-4.5, 0.5, 13.5]}/>
 
       {/* Tree */}
       {
@@ -239,18 +248,6 @@ const AllModels = () => {
         ))
       }  
 
-  
-
-      {/* Mainscene */}
-      {/* <Model
-        label=""
-        modelScene={mainscene}
-        scale={1}
-        rotation={[0, 0, 0]}
-        position={[0, 1, 0]}
-        cameraPosition={[1.5, 3, 0.5]}
-        orbitAngle={75}
-      /> */}
       
     </>
   )

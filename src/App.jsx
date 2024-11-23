@@ -25,7 +25,7 @@ function App() {
   const {lightTheme, setLightTheme} = useContext(BuildingContext)
 
   return (
-    <div className={`bg-slate-300/20 ${lightTheme ? "text-blue-600":"text-green-500"}`}>
+    <div className={`bg-slate-300/20 ${lightTheme ? "text-black":"text-white"}`}>
         <RouterProvider router={router}/>
     </div>
   )

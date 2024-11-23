@@ -14,8 +14,8 @@
     }
     
     li.slick-active button:before {
-        opacity: 0.75 !important;
-        color: black !important;
+        opacity: 1 !important;
+        color: rgb(0, 98, 255) !important;
         font-size: 11px !important;
         border-radius: 50%;
         width: 10px !important;
@@ -26,8 +26,8 @@
       li button:before {
         font-family: 'slick';
         font-size: 11px !important;
-        opacity: 0.3 !important;
-        color: black !important;
+        opacity: 0.5 !important;
+        color: rgb(0, 98, 255) !important;
         width: 10px !important;
         height: 10px !important;
       }
