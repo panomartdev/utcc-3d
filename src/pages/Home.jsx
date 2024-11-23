@@ -3,7 +3,7 @@
 import Loader from "../components/Loader";
 import Footer from "../components/Footer";
 import { Canvas, useThree, useFrame } from "@react-three/fiber";
-import { Suspense, useState, useCallback, useContext, useEffect, useRef } from "react";
+import { Suspense, useState, useCallback, useContext, useEffect, useRef, useRef } from "react";
 import Sky from "../models/Sky";
 import { OrbitControls } from "@react-three/drei";
 import IntroAnimation from "../camera/IntroAnimation";

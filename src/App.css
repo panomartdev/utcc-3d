@@ -1,3 +1,7 @@
+.suspenseComponent {
+  background-color: black;
+  margin-top: -50vh;
+  margin-left: -50vw;
 <<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
@@ -65,4 +69,11 @@
 .fade {
   opacity: 0;
 >>>>>>> 8de25de (implement fade intro)
+}  z-index: -1;
+  opacity: 1;
+  transition: 1s;
+}
+
+.fade {
+  opacity: 0;
 }
