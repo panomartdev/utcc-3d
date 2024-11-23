@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 import Loader from "../components/Loader";
 import Footer from "../components/Footer";
@@ -41,11 +42,11 @@ const {selectedModel} = useContext(BuildingContext)
        <Canvas className="w-full h-[80vh] bg-transparent">
           <Suspense fallback={<Loader/>}>
                
-               <directionalLight/>
-               <ambientLight/>
-               <pointLight/>
-               <spotLight/>
-               <hemisphereLight/>
+               <directionalLight position={[0, 10, 0]}/>
+                <ambientLight position={[0, 5, 0]}/>
+                <pointLight position={[0, 10, 0]}/>
+                <spotLight position={[0, 10, 0]}/>
+                <hemisphereLight position={[0, 5, 0]}/>
                
                <Sky/>
 
@@ -58,7 +59,7 @@ const {selectedModel} = useContext(BuildingContext)
                   enableRotate={introAnimateEnd && selectedModel == null}
                   maxDistance={30} 
                   minDistance={selectedModel == null ? 15 : 2}
-                  autoRotate={introAnimateEnd && selectedModel == null}
+                  // autoRotate={introAnimateEnd && selectedModel == null}
                   autoRotateSpeed={-1}
                   minPolarAngle={Math.PI / 5} //จำกัดมุมกล้องด้านบนสุด
                   maxPolarAngle={Math.PI / 2.25} //จำกัดมุมกล้องด้านล่างสุด

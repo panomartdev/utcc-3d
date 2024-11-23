@@ -1,32 +1,44 @@
 /* eslint-disable no-unused-vars */
 import Field from '../models/Field';
-import birdModel from "../assets/3d/bird.glb";
-import houseModel from "../assets/3d/bretonian_house.glb"
+import birdModel from "@image/3d/bird.glb";
+import houseModel from "@image/3d/bretonian_house.glb"
 import Model from './Model';
 
-import mainGround from "../assets/3d/maingroundroad_update.glb"
-import b1 from "../assets/3dmodels/Building1st.glb";
-import b3 from "../assets/3dmodels/Building3rd.glb";
-import b5 from "../assets/3dmodels/Building5th.glb";
-import b7 from "../assets/3dmodels/Building7th.glb";
-import b8 from "../assets/3dmodels/Building8th.glb";
-import b9 from "../assets/3dmodels/Building9th.glb";
-import b10 from "../assets/3dmodels/Building10th.glb";
-import b14 from "../assets/3dmodels/Building14th.glb";
-import b15 from "../assets/3dmodels/Building15th.glb";
-import b16 from "../assets/3dmodels/Building16th.glb";
-import b17 from "../assets/3dmodels/Building17th.glb";
-import b19 from "../assets/3dmodels/Building19th.glb";
-import b20 from "../assets/3dmodels/Building20th.glb";
-import b21 from "../assets/3dmodels/Building21st.glb";
-import b22 from "../assets/3dmodels/Building22nd.glb";
-import b23 from "../assets/3dmodels/Building23rd.glb";
-import b24 from "../assets/3dmodels/Building24th.glb";
-import b25 from "../assets/3dmodels/Building25th.glb";
+import mainGround from "@image/3d/maingroundroad_update.glb"
+import courtyard from "@image/3dmodels/Courtyard.glb";
+import playground from "@image/3dmodels/Playground.glb";
+import Maesai from "@image/3dmodels/TreesB10.glb";
+import b1 from "@image/3dmodels/Building1st.glb";
+import b3 from "@image/3dmodels/Building3rd.glb";
+import b5 from "@image/3dmodels/Building5th.glb";
+import b7 from "@image/3dmodels/Building7th.glb";
+import b8 from "@image/3dmodels/Building8th.glb";
+import b9 from "@image/3dmodels/Building9th.glb";
+import b10 from "@image/3dmodels/Building10th.glb";
+import b14 from "@image/3dmodels/Building14th.glb";
+import b15 from "@image/3dmodels/Building15th.glb";
+import b16 from "@image/3dmodels/Building16th.glb";
+import b17 from "@image/3dmodels/Building17th.glb";
+import b19 from "@image/3dmodels/Building19th.glb";
+import b20 from "@image/3dmodels/Building20th.glb";
+import b21 from "@image/3dmodels/Building21st.glb";
+import b22 from "@image/3dmodels/Building22nd.glb";
+import b23 from "@image/3dmodels/Building23rd.glb";
+import b24 from "@image/3dmodels/Building24th.glb";
+import b25 from "@image/3dmodels/Building25th.glb";
 
-import mainscene from "../assets/3d/Mainscenev2.glb"
+import mainscene from "@image/3d/Mainscenev2.glb"
+import Tree from '../models/Tree';
 
 const AllModels = () => {
+
+  const treeModels = [
+    {position:[-1.2, 0.5, 6.5], rotation:[0, 0, 0]},
+    {position:[1.2, 0.5, 6.5], rotation:[0, 1.8, 0]},
+    {position:[-0.8, 0.5, 5.5], rotation:[0, 2.70, 0]},
+    {position:[0, 0.5, 6.5], rotation:[0, 1.8, 0]},
+    {position:[1.5, 0.5, 5.5], rotation:[0, 2.8, 0]}
+  ];
 
   return (
     <>
@@ -194,8 +206,38 @@ const AllModels = () => {
         scale={1}
         position={[-4.5, 0.5, -6]}
         cameraPosition={[-4.5, 5, -2]}
-        orbitAngle={305}/>                                                 
+        orbitAngle={305}/> 
 
+      {/* ================Tree , Playground and others============= */}
+
+      {/* Central Courtyard  */}
+      <Model
+        modelScene={courtyard}
+        scale={1}
+        position={[0, 0.5, 2.75]}/>
+
+      {/* Playground  */}
+      <Model
+        modelScene={playground}
+        scale={1}
+        position={[9, 0.5, 9]}
+        />
+
+      {/* Special Tree   */}
+      <Model
+        modelScene={Maesai}
+        position={[7, 0.5, 13]}
+        rotation={[0, 1.2, 0]}/>
+
+      {/* Tree */}
+      {
+        treeModels.map((item,index)=>(
+          <Tree
+            key={index}
+            position={item.position}
+            rotation={item.rotation}/> 
+        ))
+      }  
 
   
 
