@@ -36,7 +36,7 @@
 .slider-imgs{
     @apply w-full h-[35vh] object-cover border-8 border-solid border-slate-500 rounded-3xl;
 } 
-
+/* light mode scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
     width: 8px; 
 }
@@ -50,7 +50,23 @@
     background-color: #97d6d3 ; 
     border-radius: 10px; 
     border: 2px solid #bee7e8; 
-}  
+}
+/* dark mode scrollbar */
+.custom-scrollbar-dark::-webkit-scrollbar {
+  width: 8px; 
+}
+
+.custom-scrollbar-dark::-webkit-scrollbar-track {
+  background: #bee7e8; 
+  border-radius: 10px; 
+}
+
+.custom-scrollbar-dark::-webkit-scrollbar-thumb {
+  background-color: #97d6d3 ; 
+  border-radius: 10px; 
+  border: 2px solid #bee7e8; 
+}
+  
 .suspenseComponent {
   background-color: black;
   margin-top: -50vh;

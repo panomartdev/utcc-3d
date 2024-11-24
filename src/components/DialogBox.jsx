@@ -44,7 +44,7 @@ const DialogBox = () => {
 
   return (
  
-      <div className={`${modelInfo ? "right-0" : "right-[-200%]"} ${lightTheme ? 'bg-[#ffffffd7]':'bg-[#2e2e2e]'} w-[25rem] min-h-[82.5vh] top-1/2 transform -translate-y-1/2 fixed py-5 px-6 shadow-lg flex flex-col z-10 rounded transition-all duration-1000 ease-in-out rounded-l-3xl `}>
+      <div className={`${modelInfo ? "right-0" : "right-[-200%]"} ${lightTheme ? 'bg-[#fffffff2]':'bg-[#2e2e2e]'} max-w-[25rem] min-h-[82.5vh] top-1/2 transform -translate-y-1/2 fixed py-5 px-6 shadow-lg flex flex-col z-10 rounded transition-all duration-1000 ease-in-out rounded-l-3xl `}>
         
             {modelInfo && (
               <>
@@ -74,7 +74,7 @@ const DialogBox = () => {
                   </div>     
                   
                   {/* Building Information */}
-                  <div className='bg-[#bee7e8] h-[30vh] overflow-y-scroll px-6 py-4 rounded-lg custom-scrollbar'>
+                  <div className={`${lightTheme ? 'bg-[#bee7e8]':'bg-black'} h-[30vh] overflow-y-scroll px-6 py-4 rounded-lg custom-scrollbar`}>
                      <p className="">{modelInfo.description}</p>
                   </div>
                  
