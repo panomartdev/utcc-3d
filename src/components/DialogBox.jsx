@@ -48,15 +48,17 @@ const DialogBox = () => {
         
             {modelInfo && (
               <>
-                  <div className='flex justify-between items-center'>
+                  {/* Title and Close Button */}
+                  <div className='flex justify-between items-start'>
                       <h2 className="text-4xl font-bold mb-2">{modelInfo.label}</h2>
                       <button 
-                       onClick={()=> handleClose()} 
-                       className="bg-blue-500 rounded-full w-10 h-10 flex items-center justify-center">
-                          <MdClose className="text-[28px] text-center text-white"/>
+                        onClick={()=> handleClose()} 
+                        className="bg-blue-500 rounded-full w-7 h-7 flex items-center justify-center">
+                          <MdClose className="text-[20px] text-center text-white"/>
                       </button>
                   </div>
 
+                  {/* Images / Images Slider */}
                   <div className='mt-2 mb-10'>
                     {
                       modelInfo.images.length < 2 ? (
@@ -66,12 +68,12 @@ const DialogBox = () => {
                               {modelInfo.images.map((image,index) => (
                                   <img key={index} src={image} alt='' className='slider-imgs'/>
                               ))}
-                        </Slider>
+                          </Slider>
                       )     
                     }
                   </div>     
                   
-                  
+                  {/* Building Information */}
                   <div className='bg-[#bee7e8] h-[30vh] overflow-y-scroll px-6 py-4 rounded-lg custom-scrollbar'>
                      <p className="">{modelInfo.description}</p>
                   </div>

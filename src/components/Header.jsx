@@ -52,10 +52,16 @@ const Header = () => {
         <div className="flex justify-between w-[90%] items-center mx-auto py-3">    
             <img src={lightTheme ? MainLogoDay : MainLogoNight} className="h-[3rem] ml-4"/>
             <div className="flex items-center gap-3">
-                <button className={`${lightTheme ? 'border-black':'border-white'} p-1.5 rounded-full border text-3xl`} onClick={()=>setLightTheme(!lightTheme)}>
+                <button 
+                  className={`${lightTheme ? 'border-black':'border-white'} p-1.5 rounded-full border text-3xl`} 
+                  onClick={()=>setLightTheme(!lightTheme)}
+                >
                     {lightTheme ? <MdLightMode/>: <MdDarkMode/>}
                 </button>
-                <button className={`${lightTheme ? 'border-black':'border-white'} p-1.5 rounded-full border border-black  text-3xl`} onClick={()=>setMusicOn(!musicOn)}>
+                <button 
+                  className={`${lightTheme ? 'border-black':'border-white'} p-1.5 rounded-full border border-black  text-3xl`} 
+                  onClick={()=>setMusicOn(!musicOn)}
+                >
                     {musicOn ? <GoUnmute/> : <GoMute/>}
                 </button>
             </div>
