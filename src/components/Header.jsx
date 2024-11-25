@@ -8,7 +8,7 @@ import MainLogoNight from "/img/logo_night.png"
 
 const Header = () => {
 
-  const {lightTheme, setLightTheme} = useContext(BuildingContext);
+  const {lightTheme, setLightTheme, } = useContext(BuildingContext);
   const [musicOn , setMusicOn] = useState(true);
   const audioRef = useRef(new Audio(bgMusic));
   const [interact, setInteract] = useState(false);

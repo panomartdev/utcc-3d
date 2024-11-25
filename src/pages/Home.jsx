@@ -25,58 +25,58 @@ export const Home = () => {
 
 //คำสั่งเรียกใช้ตัวแปรใน BuildingContext โดยต้องระบุตัวแปรจาก Context   
 
-const {orbitPosition, setOrbitPosition} = useContext(BuildingContext); 
-const {cameraPosition, setCameraPosition} = useContext(BuildingContext);
-const {orbitAngle, setOrbitAngle} = useContext(BuildingContext);
-const {selectedModel} = useContext(BuildingContext);
+  const {orbitPosition, setOrbitPosition} = useContext(BuildingContext); 
+  const {cameraPosition, setCameraPosition} = useContext(BuildingContext);
+  const {orbitAngle, setOrbitAngle} = useContext(BuildingContext);
+  const {selectedModel} = useContext(BuildingContext);
 
   return (
     <section className="w-full h-screen relative">
       <DialogBox/>
       
-      <Canvas className="w-full h-screen bg-transparent">
-        <Suspense fallback={<Loader/>}>
+        <Canvas className="w-full h-screen bg-transparent">
+            <Suspense fallback={<Loader/>}>
         
-            <Loader load={true}/>
+                <Loader load={true}/>
 
-            <directionalLight position={[0, 10, 0]}/>
-            <ambientLight position={[0, 10, 0]}/>
-            <pointLight position={[0, 10, 0]}/>
-            <spotLight position={[0, 10, 0]}/>
-            <hemisphereLight position={[0, 10, 0]}/>
-            
-            <Sky/>
-            
-            {/* Orbit and Camera  */}
-            {/* Component สำหรับการควบคุมมุมกล้อง (หมุนซ้าย-ขวา , หมุนขึ้น-ลง) */}
-            <OrbitControls
-               enableZoom={introAnimateEnd && selectedModel == null} 
-               enablePan={false} 
-               enableRotate={introAnimateEnd && selectedModel == null}
-               maxDistance={40} 
-               minDistance={selectedModel == null ? 15 : 2}
-               autoRotate={introAnimateEnd && selectedModel == null}
-               autoRotateSpeed={-1}
-               minPolarAngle={Math.PI / 5} //จำกัดมุมกล้องด้านบนสุด
-               maxPolarAngle={Math.PI / 2.25} //จำกัดมุมกล้องด้านล่างสุด
-               target={orbitPosition}
-            />
+                <directionalLight position={[0, 10, 0]}/>
+                <ambientLight position={[0, 10, 0]}/>
+                <pointLight position={[0, 10, 0]}/>
+                <spotLight position={[0, 10, 0]}/>
+                <hemisphereLight position={[0, 10, 0]}/>
+                
+                <Sky/>
+                
+                {/* Orbit and Camera  */}
+                {/* Component สำหรับการควบคุมมุมกล้อง (หมุนซ้าย-ขวา , หมุนขึ้น-ลง) */}
+                <OrbitControls
+                  enableZoom={introAnimateEnd && selectedModel == null} 
+                  enablePan={false} 
+                  enableRotate={introAnimateEnd && selectedModel == null}
+                  maxDistance={30} 
+                  minDistance={selectedModel == null ? 15 : 2}
+                  autoRotate={introAnimateEnd && selectedModel == null}
+                  autoRotateSpeed={-1}
+                  minPolarAngle={Math.PI / 5} //จำกัดมุมกล้องด้านบนสุด
+                  maxPolarAngle={Math.PI / 2.25} //จำกัดมุมกล้องด้านล่างสุด
+                  target={orbitPosition}
+                />
 
-      
-            {/* ควบคุมกล้องตอนโหลดหน้าใหม่ โดยเริ่มต้นจากระยะไกลๆ แล้วค่อยๆซูมเข้ามา */}
-            <IntroAnimation startAnimation={handleIntroAnimate} endAnimatePosition={cameraPosition}/>
+          
+                {/* ควบคุมกล้องตอนโหลดหน้าใหม่ โดยเริ่มต้นจากระยะไกลๆ แล้วค่อยๆซูมเข้ามา */}
+                <IntroAnimation startAnimation={handleIntroAnimate} endAnimatePosition={cameraPosition}/>
 
-            {/* สำหรับการเปลี่ยนจุด Focus หรือ OrbitPosition */}
-            <CameraController
-               orbitPosition={orbitPosition} 
-               cameraPosition={cameraPosition} 
-               orbitAngle={orbitAngle}
-            /> 
-               
-            {/* All Models    */}
-            <AllModels/>
+                {/* สำหรับการเปลี่ยนจุด Focus หรือ OrbitPosition */}
+                <CameraController
+                  orbitPosition={orbitPosition} 
+                  cameraPosition={cameraPosition} 
+                  orbitAngle={orbitAngle}
+                /> 
+                  
+                {/* All Models    */}
+                <AllModels/>
             
-          </Suspense>
+            </Suspense>
        </Canvas>
        <Footer/> 
     </section>
