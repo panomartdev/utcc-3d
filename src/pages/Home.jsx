@@ -29,6 +29,7 @@ export const Home = () => {
   const {cameraPosition, setCameraPosition} = useContext(BuildingContext);
   const {orbitAngle, setOrbitAngle} = useContext(BuildingContext);
   const {selectedModel} = useContext(BuildingContext);
+  const {lightTheme, setLightTheme} = useContext(BuildingContext);
 
   return (
     <section className="w-full h-screen relative">
@@ -36,14 +37,20 @@ export const Home = () => {
       
         <Canvas className="w-full h-screen bg-transparent">
             <Suspense fallback={<Loader/>}>
-        
                 <Loader load={true}/>
 
-                <directionalLight position={[0, 10, 0]}/>
-                <ambientLight position={[0, 10, 0]}/>
-                <pointLight position={[0, 10, 0]}/>
-                <spotLight position={[0, 10, 0]}/>
-                <hemisphereLight position={[0, 10, 0]}/>
+                <directionalLight 
+                  position={[-5, 10, 0]} 
+                  intensity={1} 
+                  color="#efc070" 
+                />
+                <ambientLight 
+                  position={[0, 10, 0]} 
+                  intensity={lightTheme ? 0.8 : 0.1} 
+                />
+                <pointLight position={[-5, 10, 0]} intensity={1}/>
+                <spotLight position={[0, 10, 0]} intensity={0.1} />
+                <hemisphereLight position={[0, 10, 0]} intensity={0.1} />
                 
                 {/* โมเดล Skybox ที่เป็นพื้นหลังของงาน */}
                 <Sky/>
