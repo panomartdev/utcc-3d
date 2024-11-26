@@ -12,11 +12,10 @@ const Model = (props) => {
               <primitive object={scene} />
           </mesh>
 
-          {/* สำหรับการส่ง Props จะเป็นแบบนี้ จะขึ้นต้นด้วย 
-              <ชื่อตัวแปร> = {value ที่ต้องการส่ง} 
-              เช่น position<ชื่อตัวแปร> = < ค่า value ดึงค่าจาก position ด้านบน > */}
+          {/* ถ้าค่า Label ไม่เป็นค่าว่าง => Model Constructor จะพ่วง Component: Marker เข้ามาด้วยซึ่งเป็นตัวสร้าง Marker สีขาวๆ 
+              สำหรับการกดคลิ๊กเพื่อเปิด DialogBox ข้อมูลของตึกที่ถูกเลือก */}
           { 
-            label &&
+            label && 
               <Marker 
                 position={position} 
                 label={label} 

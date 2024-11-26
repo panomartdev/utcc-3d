@@ -23,7 +23,7 @@ export const Home = () => {
 
   //============== Camera positions and Orbit Controling Functions ===========
 
-//คำสั่งเรียกใช้ตัวแปรใน BuildingContext โดยต้องระบุตัวแปรจาก Context   
+  //คำสั่งเรียกใช้ Context โดยอ้างอิงตัวแปรใน Context ที่ต้องการนำมาใช้ และตามด้วยคำสั่ง useContext()
 
   const {orbitPosition, setOrbitPosition} = useContext(BuildingContext); 
   const {cameraPosition, setCameraPosition} = useContext(BuildingContext);
@@ -75,9 +75,9 @@ export const Home = () => {
 
                 {/* Component สำหรับการเปลี่ยนจุด Focus ของกล้อง, ตำแหน่งของกล้อง และ องศารอบวัตถุเริ่มต้น */}
                 <CameraController
-                  orbitPosition={orbitPosition} 
-                  cameraPosition={cameraPosition} 
-                  orbitAngle={orbitAngle}
+                  orbitPosition={orbitPosition} //ตำแหน่งที่กล้องหันไป หรือ จุดที่กล้องโฟกัส
+                  cameraPosition={cameraPosition} //ตำแหน่งของกล้อง
+                  orbitAngle={orbitAngle} //องศารอบวัตถุแรกเริ่ม 
                 /> 
                   
                 {/* Component รวมโมเดลต่างๆ เช่น โมเดลอาคารต่างๆ , พื้น , สิ่งปลูกสร้างอื่นๆ    */}
