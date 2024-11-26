@@ -7,6 +7,7 @@ import Model from './Model';
 import mainGround from "@image/3d/maingroundroad_update.glb"
 import courtyard from "@image/3dmodels/Courtyard.glb";
 import playground from "@image/3dmodels/Playground.glb";
+import Dom from "@image/3dmodels/Dom.glb";
 import Maesai from "@image/3dmodels/TreesB10.glb";
 import Flag from "@image/3dmodels/Flag.glb";
 import b1 from "@image/3dmodels/Building1st.glb";
@@ -221,10 +222,18 @@ const AllModels = () => {
 
       {/* Playground  */}
       <Model
+        modelScene={Dom}
+        scale={0.5}
+        position={[3.75, 0.5, -7.5]}
+        />
+
+      {/* Dom  */}
+      <Model
         modelScene={playground}
         scale={1}
         position={[9, 0.5, 9]}
         />
+
 
       {/* Maesai Tree   */}
       <Model
