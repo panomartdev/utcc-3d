@@ -45,35 +45,36 @@ export const Home = () => {
                 <spotLight position={[0, 10, 0]}/>
                 <hemisphereLight position={[0, 10, 0]}/>
                 
+                {/* โมเดล Skybox ที่เป็นพื้นหลังของงาน */}
                 <Sky/>
                 
                 {/* Orbit and Camera  */}
                 {/* Component สำหรับการควบคุมมุมกล้อง (หมุนซ้าย-ขวา , หมุนขึ้น-ลง) */}
                 <OrbitControls
-                  enableZoom={introAnimateEnd && selectedModel == null} 
-                  enablePan={false} 
-                  enableRotate={introAnimateEnd && selectedModel == null}
-                  maxDistance={30} 
-                  minDistance={selectedModel == null ? 15 : 2}
-                  autoRotate={introAnimateEnd && selectedModel == null}
-                  autoRotateSpeed={-1}
+                  enableZoom={introAnimateEnd && selectedModel == null} //ซูมได้ ก็ต่อเมื่อ introAnimateEnd = true และ ไม่มีโมเดลตึกที่เลือก
+                  enablePan={false} // ปิดการ Pan กล้อง
+                  enableRotate={introAnimateEnd && selectedModel == null} //หมุนกล้องได้ ก็ต่อเมื่อ introAnimateEnd = true และ ไม่มีโมเดลตึกที่เลือก
+                  maxDistance={30} //ระยะซูมที่ไกลที่สุด
+                  minDistance={selectedModel == null ? 15 : 2} // ระยะซูมใกล้ที่สุด
+                  autoRotate={introAnimateEnd && selectedModel == null} // หมุนกล้องอัติโนมัติเมื่อ introAnimateEnd เป็น true และ ไม่ได้เลือกตึกใดๆ
+                  autoRotateSpeed={-1} //ความเร็วในการหมุนอัตโนมัติ
                   minPolarAngle={Math.PI / 5} //จำกัดมุมกล้องด้านบนสุด
                   maxPolarAngle={Math.PI / 2.25} //จำกัดมุมกล้องด้านล่างสุด
-                  target={orbitPosition}
+                  target={orbitPosition} //จุดที่โฟกัสของกล้อง
                 />
 
           
                 {/* ควบคุมกล้องตอนโหลดหน้าใหม่ โดยเริ่มต้นจากระยะไกลๆ แล้วค่อยๆซูมเข้ามา */}
                 <IntroAnimation startAnimation={handleIntroAnimate} endAnimatePosition={cameraPosition}/>
 
-                {/* สำหรับการเปลี่ยนจุด Focus หรือ OrbitPosition */}
+                {/* Component สำหรับการเปลี่ยนจุด Focus ของกล้อง, ตำแหน่งของกล้อง และ องศารอบวัตถุเริ่มต้น */}
                 <CameraController
                   orbitPosition={orbitPosition} 
                   cameraPosition={cameraPosition} 
                   orbitAngle={orbitAngle}
                 /> 
                   
-                {/* All Models    */}
+                {/* Component รวมโมเดลต่างๆ เช่น โมเดลอาคารต่างๆ , พื้น , สิ่งปลูกสร้างอื่นๆ    */}
                 <AllModels/>
             
             </Suspense>

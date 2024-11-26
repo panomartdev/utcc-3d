@@ -44,7 +44,7 @@ const DialogBox = () => {
 
   return (
  
-      <div className={`${modelInfo ? "right-0" : "right-[-200%]"} ${lightTheme ? 'bg-[#fffffff2]':'bg-[#2e2e2e]'} max-w-[25rem] min-h-[82.5vh] top-1/2 transform -translate-y-1/2 fixed py-5 px-6 shadow-lg flex flex-col z-10 rounded transition-all duration-1000 ease-in-out rounded-l-3xl `}>
+      <div className={`${modelInfo ? "right-0" : "right-[-200%]"} ${lightTheme ? 'bg-[#fffffff2]':'bg-[#2e2e2e]'} max-w-[25rem] min-h-[82.5vh] top-1/2 transform -translate-y-1/2 fixed py-5 px-6 shadow-lg flex flex-col z-10 rounded transition-all duration-500 ease-in-out rounded-l-3xl `}>
         
             {modelInfo && (
               <>
