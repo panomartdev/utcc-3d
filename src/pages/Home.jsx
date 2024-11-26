@@ -30,7 +30,7 @@ export const Home = () => {
   const {orbitAngle, setOrbitAngle} = useContext(BuildingContext);
   const {selectedModel} = useContext(BuildingContext);
   const {lightTheme, setLightTheme} = useContext(BuildingContext);
-
+  const lightPos = [-5, 20, 10];
   return (
     <section className="w-full h-screen relative">
       <DialogBox/>
@@ -40,17 +40,16 @@ export const Home = () => {
                 <Loader load={true}/>
 
                 <directionalLight 
-                  position={[-5, 10, 0]} 
+                  position={lightPos} 
                   intensity={1} 
-                  color="#efc070" 
+                  color="#efc070"
                 />
                 <ambientLight 
-                  position={[0, 10, 0]} 
                   intensity={lightTheme ? 0.8 : 0.1} 
                 />
-                <pointLight position={[-5, 10, 0]} intensity={1}/>
-                <spotLight position={[0, 10, 0]} intensity={0.1} />
-                <hemisphereLight position={[0, 10, 0]} intensity={0.1} />
+                <pointLight position={lightPos} intensity={1} castShadow/>
+                <spotLight position={lightPos} intensity={0.1}/>
+                <hemisphereLight intensity={0.1} />
                 
                 {/* โมเดล Skybox ที่เป็นพื้นหลังของงาน */}
                 <Sky/>
