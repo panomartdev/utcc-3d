@@ -4,7 +4,7 @@ import birdModel from "@image/3d/bird.glb";
 import houseModel from "@image/3d/bretonian_house.glb"
 import Model from './Model';
 
-import mainGround from "@image/3d/maingroundroad_update.glb"
+import mainGround from "@image/3dmodels/maingroundroad_update.glb"
 import courtyard from "@image/3dmodels/Courtyard.glb";
 import playground from "@image/3dmodels/Playground.glb";
 import Dom from "@image/3dmodels/Dom.glb";
