@@ -55,6 +55,7 @@ export const Home = () => {
                 <Sky/>
                 
                 {/* Orbit and Camera  */}
+                
                 {/* Component สำหรับการควบคุมมุมกล้อง (หมุนซ้าย-ขวา , หมุนขึ้น-ลง) */}
                 <OrbitControls
                   enableZoom={introAnimateEnd && selectedModel == null} //ซูมได้ ก็ต่อเมื่อ introAnimateEnd = true และ ไม่มีโมเดลตึกที่เลือก

@@ -31,7 +31,7 @@ const Header = () => {
   }, []);
 
   // Play music after interaction or when musicOn changes
-  useEffect(() => {
+  useEffect(() => { 
     audioRef.current.loop = true;
     audioRef.current.volume = 0.5;
     if (interact) {

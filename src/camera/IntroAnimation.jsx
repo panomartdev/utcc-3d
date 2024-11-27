@@ -6,8 +6,8 @@ import * as THREE from 'three';
 const IntroAnimation = ({startAnimation, endAnimatePosition}) => {
     const { camera } = useThree();
     const [animationComplete, setAnimationComplete] = useState(false);
-    const startPosition = useRef([0, 20, 55]); // Starting position (far away)
-    const endPosition = endAnimatePosition; // End position (as specified in your Canvas)
+    const startPosition = useRef([0, 20, 55]); // ตำแหน่งจุดเริ่มต้น
+    const endPosition = endAnimatePosition; // ตำแหน่งจุดปลายทาง
   
     useFrame(() => {
       if (!animationComplete) {

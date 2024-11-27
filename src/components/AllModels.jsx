@@ -1,7 +1,4 @@
 /* eslint-disable no-unused-vars */
-import Field from '../models/Field';
-import birdModel from "@image/3d/bird.glb";
-import houseModel from "@image/3d/bretonian_house.glb"
 import Model from './Model';
 
 import mainGround from "@image/3dmodels/maingroundroad_update.glb"
@@ -29,7 +26,6 @@ import b23 from "@image/3dmodels/Building23rd.glb";
 import b24 from "@image/3dmodels/Building24th.glb";
 import b25 from "@image/3dmodels/Building25th.glb";
 
-import mainscene from "@image/3d/Mainscenev2.glb"
 import Tree from '../models/Tree';
 
 const AllModels = () => {
