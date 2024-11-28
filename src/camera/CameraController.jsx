@@ -13,7 +13,7 @@ const CameraController = ({ orbitPosition,cameraPosition, orbitAngle = 0 }) => {
     const animationProgress = useRef(0);
 
     useEffect(() => {
-        startPosition.current.copy(camera.position);
+        startPosition.current.copy(camera.position); //คัดลอกตำแหน่งปัจจุบันเพื่อกำหนดเป็นจุดเริ่มเต้น
         startLookAt.current.copy(camera.position).add(camera.getWorldDirection(new THREE.Vector3()));
         
         // Calculate the new camera position based on the orbit angle
