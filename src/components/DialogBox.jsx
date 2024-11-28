@@ -13,7 +13,7 @@ const DialogBox = () => {
   // Fetch data from JSON file
   useEffect(() => {
     if(selectedModel){
-        fetch('/src/data/info.json')
+        fetch('/data/info.json')
           .then(response => response.json())
           .then(data => {
              const selectedInfo = data.info.find(item => item.label === selectedModel)
